@@ -2,8 +2,15 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "json-server"
+    },
+    {
+      "id": 2,
+      "title": "asdasdr"
+    },
+    {
+      "id": 3,
+      "title": "jasdasderver"
     }
   ],
   "comments": [
