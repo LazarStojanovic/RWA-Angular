@@ -1,23 +1,32 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { StoreModule } from "@ngrx/store";
-import { rootReducer } from "./store";
-import { HeaderComponent } from "./components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
-import { MainComponentComponent } from './components/main-component/main-component.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { StoreModule} from '@ngrx/store';
+import { StoreDevtoolsModule} from '@ngrx/store-devtools';
+
+import { PostsModule } from './posts/posts.module';
+import { reducers } from './posts/store';
+import { RequestsService } from './posts/services/request.service';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponentComponent],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    StoreModule.forRoot(rootReducer)
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    }),
+    PostsModule,
+    EffectsModule.forRoot([])
   ],
-  providers: [],
+  providers: [RequestsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

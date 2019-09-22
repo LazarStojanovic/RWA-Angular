@@ -1,0 +1,25 @@
+{   
+"offers": [
+    {
+        "id": 1,
+        "title": "Dajem AB Grupa Hitno"
+    },
+    {
+        "id": 2,
+        "title": "Dajem 0 negativna grupa"
+    }
+    ],
+"requests": [
+    {
+        "id": 1,
+        "title": "Potrebna AB Grupu"
+    },
+    {
+        "id": 2,
+        "title": "Potrebna 0 negativnu grupu"
+    }
+    ]
+}
+    
+
+  
