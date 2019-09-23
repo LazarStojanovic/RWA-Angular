@@ -2,23 +2,25 @@
 "offers": [
     {
         "id": 1,
-        "title": "Dajem AB Grupa Hitno",
-        "text": "bla TRARA bla"
+        "title": "Dajem AB+ Krvnu grupu",
+        "text": "Doniram AB+ krvnu grupu ljudima u ili okolini Nisa"
     },
     {
         "id": 2,
         "title": "Dajem 0 negativna grupa",
-        "text": "bla bla"
+        "text": "Doniram 0 negativnu krvnu grupu deci i odraslima"
     }
     ],
 "requests": [
     {
         "id": 1,
-        "title": "Potrebna AB Grupu"
+        "title": "Potrebna AB Grupu",
+        "text": "Hitno potrebna AB krva grupa radi lecenja"
     },
     {
         "id": 2,
-        "title": "Potrebna 0 negativnu grupu"
+        "title": "Potrebna 0 negativnu grupu",
+        "text": "Hitno potrebna 0 negativna krva grupa transfuzije"
     }
     ]
 }

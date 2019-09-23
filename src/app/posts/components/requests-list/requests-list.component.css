@@ -1,0 +1,24 @@
+.wraper{
+    background:url("../../../../assets/images/listPic.jpg");
+    height: 85vh;
+    width: 100%;
+    margin-top: -22px;
+}
+
+h1{
+    color:white;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    padding-right: 3vh;
+}
+
+ul li a{
+    color: white;
+    padding-right: 3vh;
+    font-size: 15pt;
+    margin-top: 3px;
+}

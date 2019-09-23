@@ -1,8 +1,11 @@
-<h1>Offer List</h1>
+<div class="wraper">
+  <h1>Active Offer List</h1>
 
-<ul>
-  <li *ngFor="let offer of offers">
-    <a [routerLink]="['/posts/offers', offer.id]">{{ offer.title }}</a>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let offer of offers">
+      <a [routerLink]="['/posts/offers', offer.id]">{{ offer.title }}</a>
+    </li>
+  </ul>
+</div>
+
 <router-outlet></router-outlet>
