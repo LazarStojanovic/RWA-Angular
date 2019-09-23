@@ -2,11 +2,13 @@
 "offers": [
     {
         "id": 1,
-        "title": "Dajem AB Grupa Hitno"
+        "title": "Dajem AB Grupa Hitno",
+        "text": "bla TRARA bla"
     },
     {
         "id": 2,
-        "title": "Dajem 0 negativna grupa"
+        "title": "Dajem 0 negativna grupa",
+        "text": "bla bla"
     }
     ],
 "requests": [

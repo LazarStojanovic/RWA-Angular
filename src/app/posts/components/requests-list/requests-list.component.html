@@ -1,0 +1,8 @@
+<h1>Requests List</h1>
+
+<ul>
+  <li *ngFor="let request of requests">
+    <a [routerLink]="['/posts/requests', request.id]">{{ request.title }}</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

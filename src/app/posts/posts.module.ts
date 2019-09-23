@@ -5,23 +5,26 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule} from '@ngrx/store';
 import { reducers , effects} from './store';
-import { PostsComponent } from './containers/posts/posts.component';
+import { RequestsComponent } from './containers/requests/requests.component';
 import { EffectsModule } from '@ngrx/effects';
 import { RequestsService } from './services/request.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
+import { RequestsListComponent } from './components/requests-list/requests-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { RequestDetailComponent } from './components/request-detail/request-detail.component';
 @NgModule({
-  declarations: [PostsComponent, FooterComponent, HeaderComponent, MainComponent],
+  declarations: [RequestsComponent, FooterComponent, HeaderComponent, RequestsListComponent, HomeComponent, AboutComponent, RequestDetailComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    //RouterModule,
+    RouterModule,
     StoreModule.forFeature('posts', reducers),
     EffectsModule.forFeature(effects)
   ],
   providers: [RequestsService],
-  exports: [HeaderComponent,MainComponent,FooterComponent,]
+  exports: [HeaderComponent,RequestsComponent,FooterComponent,HomeComponent,AboutComponent,RequestsListComponent,RequestDetailComponent]
 })
 export class PostsModule { }
