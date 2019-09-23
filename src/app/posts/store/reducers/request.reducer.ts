@@ -1,18 +1,13 @@
 import { Request } from "../../models/request.model";
 import * as fromRequests from "../actions/request.action";
 export interface RequestState {
-  data: Request[];
+  entities: { [id: number ] : Request};  
   loaded: boolean;
   loading: boolean;
 }
 
 export const initialState: RequestState = {
-  data: [
-      {
-          id:1,
-          title: 'Potrebana 0 negativna krvna grupa'
-      }
-  ],
+  entities: {},
   loaded: false,
   loading: false
 };
@@ -41,11 +36,20 @@ export default function reducer(
       };
     }
     case fromRequests.LOAD_REQUESTS_SUCCESS: {
-      console.log(action.requests);
+      const requests = action.requests;
+      const entities = requests.reduce((entities: { [id:number]:Request },request) => {
+        return{
+          ...entities,
+          [request.id]: request
+        }
+      },{
+        ...state.entities 
+      })
       return {
         ...state,
         loading: false,
-        loaded: true
+        loaded: true,
+        entities,
       };
     }
     case fromRequests.CREATE_REQUEST: {
@@ -75,4 +79,4 @@ export default function reducer(
 
 export const getRequestsLoading = (state: RequestState) => state.loading;
 export const getRequestsLoaded = (state: RequestState) => state.loaded;
-export const getRequests = (state: RequestState) => state.data;
+export const getRequestsEntities = (state: RequestState) => state.entities;

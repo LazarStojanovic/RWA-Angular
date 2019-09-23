@@ -8,8 +8,11 @@ import { reducers , effects} from './store';
 import { PostsComponent } from './containers/posts/posts.component';
 import { EffectsModule } from '@ngrx/effects';
 import { RequestsService } from './services/request.service';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
 @NgModule({
-  declarations: [PostsComponent],
+  declarations: [PostsComponent, FooterComponent, HeaderComponent, MainComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -19,6 +22,6 @@ import { RequestsService } from './services/request.service';
     EffectsModule.forFeature(effects)
   ],
   providers: [RequestsService],
-  exports: [PostsComponent]
+  exports: [HeaderComponent,MainComponent,FooterComponent,]
 })
 export class PostsModule { }

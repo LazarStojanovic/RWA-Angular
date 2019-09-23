@@ -9,7 +9,6 @@ import { StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 import { PostsModule } from './posts/posts.module';
 import { reducers } from './posts/store';
-import { RequestsService } from './posts/services/request.service';
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
@@ -19,14 +18,14 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 25
     }),
     PostsModule,
     EffectsModule.forRoot([])
   ],
-  providers: [RequestsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

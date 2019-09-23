@@ -20,6 +20,21 @@ export const getRequestState = createSelector(
   (state: PostState) => state.requests
 );
 
-export const getAllRequests =  createSelector(getRequestState, fromRequests.getRequests);
-export const getRequestsLoading =  createSelector(getRequestState, fromRequests.getRequestsLoading);
-export const getRequestsLoaded =  createSelector(getRequestState, fromRequests.getRequestsLoaded);
+export const getRequestsEntities = createSelector(
+  getRequestState,
+  fromRequests.getRequestsEntities
+);
+export const getRequestsLoading = createSelector(
+  getRequestState,
+  fromRequests.getRequestsLoading
+);
+export const getRequestsLoaded = createSelector(
+  getRequestState,
+  fromRequests.getRequestsLoaded
+);
+export const getAllRequests = createSelector(
+  getRequestsEntities,
+  entities => {
+    return Object.keys(entities).map(id => entities[parseInt(id, 10)]);
+  }
+);

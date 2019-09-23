@@ -9,15 +9,13 @@ import * as fromStore from '../../store';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  requests: Request[];
+  requests: Observable<Request[]>;
 
   
   constructor(private store:Store<fromStore.PostState>) { }
 
   ngOnInit() {
-    this.store.select(fromStore.getAllRequests).subscribe(state => {
-       // obrisi kasnije
-    })
+    this.requests = this.store.select(fromStore.getAllRequests);  
 
     this.store.dispatch(new fromStore.LoadRequests());
   }
