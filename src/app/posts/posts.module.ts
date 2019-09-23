@@ -14,8 +14,12 @@ import { RequestsListComponent } from './components/requests-list/requests-list.
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { RequestDetailComponent } from './components/request-detail/request-detail.component';
+import { OffersComponent } from './containers/offers/offers.component';
+import { OfferDetailComponent } from './components/offer-detail/offer-detail.component';
+import { OffersListComponent } from './components/offers-list/offers-list.component';
+
 @NgModule({
-  declarations: [RequestsComponent, FooterComponent, HeaderComponent, RequestsListComponent, HomeComponent, AboutComponent, RequestDetailComponent],
+  declarations: [RequestsComponent, FooterComponent, HeaderComponent, RequestsListComponent, HomeComponent, AboutComponent, RequestDetailComponent, OffersComponent, OfferDetailComponent, OffersListComponent,],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -25,6 +29,6 @@ import { RequestDetailComponent } from './components/request-detail/request-deta
     EffectsModule.forFeature(effects)
   ],
   providers: [RequestsService],
-  exports: [HeaderComponent,RequestsComponent,FooterComponent,HomeComponent,AboutComponent,RequestsListComponent,RequestDetailComponent]
+  exports: [HeaderComponent,RequestsComponent,FooterComponent,HomeComponent,AboutComponent,RequestsListComponent,RequestDetailComponent,OffersComponent, OfferDetailComponent, OffersListComponent,]
 })
 export class PostsModule { }

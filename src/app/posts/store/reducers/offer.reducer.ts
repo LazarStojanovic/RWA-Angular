@@ -17,18 +17,6 @@ export default function reducer(
   action: fromOffers.OfferActions
 ): OfferState {
   switch (action.type) {
-    case fromOffers.LOAD_OFFER: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromOffers.LOAD_OFFER_SUCCESS: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
     case fromOffers.LOAD_OFFERS: {
       return {
         ...state,
@@ -51,25 +39,6 @@ export default function reducer(
         loaded: true,
         entities,
       };
-    }
-    case fromOffers.CREATE_OFFER: {
-      //izmeniti
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromOffers.UPDATE_OFFER: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromOffers.DELETE_OFFER: {
-      return {
-        ...state,
-        loading: true
-      }; //do ovde
     }
     default:
       return state;

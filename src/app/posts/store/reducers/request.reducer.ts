@@ -17,18 +17,6 @@ export default function reducer(
   action: fromRequests.RequestActions
 ): RequestState {
   switch (action.type) {
-    case fromRequests.LOAD_REQUEST: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromRequests.LOAD_REQUEST_SUCCESS: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
     case fromRequests.LOAD_REQUESTS: {
       return {
         ...state,
@@ -51,25 +39,6 @@ export default function reducer(
         loaded: true,
         entities,
       };
-    }
-    case fromRequests.CREATE_REQUEST: {
-      //izmeniti
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromRequests.UPDATE_REQUEST: {
-      return {
-        ...state,
-        loading: true
-      };
-    }
-    case fromRequests.DELETE_REQUEST: {
-      return {
-        ...state,
-        loading: true
-      }; //do ovde
     }
     default:
       return state;

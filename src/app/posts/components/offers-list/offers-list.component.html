@@ -1,0 +1,8 @@
+<h1>Offer List</h1>
+
+<ul>
+  <li *ngFor="let offer of offers">
+    <a [routerLink]="['/posts/offers', offer.id]">{{ offer.title }}</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
